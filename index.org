@@ -1,0 +1,12 @@
+#+TITLE: snat-s
+
+* El sitio de snat-s (Santiago Pedroza)
+ Este es el sitio en donde estaré publicando todos mis proyectos. Más que nada es para mantener un registro tanto de mi vida como de los proyectos que llegue a hacer con el tiempo.
+** Proyectos
+*** Organice
+Organice es una herramienta que te ayuda organizar todos tus archivos en un segundo. Si te interesa, haz click [[https://github.com/snat-s/organice][aquí.]]
+*** La Página Oficial del MYPT
+La página oficial del Mexican Young Physicist's Tournament fue mi primer sitio. Como personalmente pienso que Javascript normalmente no es necesario en las páginas y trato de mantener la página accesible a cualquier persona. Es por eso que no pienso            que sea necesario tener Javascript en una página que no va a recibir mucho mantenimiento.
+Si estás interesado en entrar a la página actualmente no es posible pero el repositorio para el código está [[https://github.com/snat-s/mypt][aquí.]]
+*** Ésta página
+Ésta página también la he creado yo. Es un experimento porque como tal e tratado de saltarme el proceso de crearla y utilicé org-mode de Emacs (pronto haré un artículo de como puedes hacer esto). Si estás interesado en el código que la compone te dejo el link [[https://github.com/snat-s/snat-s.github.io][aquí.]]
