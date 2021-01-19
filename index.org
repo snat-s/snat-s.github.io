@@ -1,5 +1,6 @@
 #+TITLE: snat-s
-
+#+OPTIONS: toc:nil date: nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-light.min.css" />
 * El sitio de snat-s (Santiago Pedroza)
  Este es el sitio en donde estaré publicando todos mis proyectos. Más que nada es para mantener un registro tanto de mi vida como de los proyectos que llegue a hacer con el tiempo.
 ** Proyectos
