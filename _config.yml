@@ -23,6 +23,7 @@ email: santpedrozadiaz@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is a blog where I publish stuff to maintain a record of the things
   I do (normally about technolgy) and it too serves as a portfolio.
+  The contents of this website are © 2021 under GPLV3.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "https://snat-s.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: @sant_pedroza
