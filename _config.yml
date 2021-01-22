@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   The contents of this website are © 2021 under GPLV3.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://snat-s.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: santpedroza
+twitter_username: sants_pedroza
 github_username:  snat-s
 
 # Build settings
