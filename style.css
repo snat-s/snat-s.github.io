@@ -1,0 +1,78 @@
+nav {
+    width: 280px;
+    position: fixed;
+}
+
+li, a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+
+li, a:hover {
+    color: grey;
+    padding: 10px;
+}
+
+div {
+    width: 600px;
+    border: 5px solid white;
+    justify-content: center;
+    margin:auto;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+h4 {
+    padding: 40px;
+    width:500px;
+    float: right;
+}
+h5 {
+    float:right; {
+        float:right;
+    }
+}
+
+.titulo {
+    text-align: center;
+}
+
+/* CSS para Celular */
+@media only screen and (max-width: 900px) {
+    ::-webkit-scrollbar {
+      width: 0 !important;
+    }
+
+    body {
+        font-size: small;
+    }
+    nav {
+        width: 100%;
+        background: white;
+        top: 0;
+    }
+    div {
+        width: 100%;
+        border: 10px solid white;
+        float: center;
+    }
+    li , a {
+        float: left;
+    }
+    h4 {
+        float: center;
+        padding: 30px;
+        width: 100px;
+    }
+    p {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    br {
+        font-size: 400%;
+    }
+}
