@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aprender con Unix</title>
+<meta name="generator" content="Org mode" />
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">Aprender con Unix</h1>
+
+
+<div id="outline-container-org3ea58fc" class="outline-2">
+<h2 id="org3ea58fc">¿A que me refiero con aprender con Unix?</h2>
+<div class="outline-text-2" id="text-org3ea58fc">
+<p>
+Con herramientas del estilo unix, puedes esperar a encontrarte a muchas
+patrones. Estos patrones se crearon como una comodidad y normalmente en los
+sistemas de tipo Unix (Gnu/Linux, OS X, *BSD) te podrás encontrar con estas
+ideas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbdf02f3" class="outline-2">
+<h2 id="orgbdf02f3">La bandera más importante</h2>
+<div class="outline-text-2" id="text-orgbdf02f3">
+<p>
+<code>-h --help</code> es la bandera con la que pudes pedir ayuda en cualquier herramienta
+de comandos.
+</p>
+</div>
+
+<div id="outline-container-orge0615a2" class="outline-3">
+<h3 id="orge0615a2">Ejemplo:</h3>
+<div class="outline-text-3" id="text-orge0615a2">
+<ul class="org-ul">
+<li><code>cd --help</code>
+<ul class="org-ul">
+<li>Este comando te da las opciones para entrar rápidamente a usar este comando.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf0a4e46" class="outline-2">
+<h2 id="orgf0a4e46">Herramientas para leer documentación:</h2>
+<div class="outline-text-2" id="text-orgf0a4e46">
+</div>
+<div id="outline-container-orga506f1a" class="outline-3">
+<h3 id="orga506f1a">Introducción:</h3>
+<div class="outline-text-3" id="text-orga506f1a">
+<p>
+La mayoría de los sistemas de Unix tienen secciónes de sus manuales<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>,
+estas son las siguientes:
+</p>
+
+<ol class="org-ol">
+<li>Executable programs or shell commands</li>
+<li>System calls (functions provided by the kernel)</li>
+<li>Library calls (functions within program libraries)</li>
+<li>Special files (usually found in /dev)</li>
+<li>File formats and conventions, e.g. /etc/passwd</li>
+<li>Games</li>
+<li>Miscellaneous (including  macro  packages  and  conventions),  e.g.
+man(7), groff(7)</li>
+<li>System administration commands (usually only for root)</li>
+<li>Kernel routines [Non standard]</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org277bd52" class="outline-3">
+<h3 id="org277bd52"><code>apropos(1)</code></h3>
+<div class="outline-text-3" id="text-org277bd52">
+<p>
+<code>apropos(1)</code> es una herramienta que busca en los manuales de las páginas y sus
+descripciónes.
+</p>
+</div>
+
+<div id="outline-container-org9ae52af" class="outline-4">
+<h4 id="org9ae52af">Banderas Importantes:</h4>
+<div class="outline-text-4" id="text-org9ae52af">
+<ul class="org-ul">
+<li><code>-a --and</code> hace un and lógico en donde tiene que encontrar dos términos
+especificados.</li>
+<li><code>-r --regex</code> usar una expresión regular en específico.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org25f7e9a" class="outline-4">
+<h4 id="org25f7e9a">Ejemplos:</h4>
+<div class="outline-text-4" id="text-org25f7e9a">
+<ul class="org-ul">
+<li><code>apropos vim</code> 
+<ul class="org-ul">
+<li>Busca todo lo que tenga vim en el nombre.</li>
+</ul></li>
+
+<li><code>apropos emacs -a tags</code>
+<ul class="org-ul">
+<li>Busca todo lo que tenga <b>emacs y tags</b></li>
+</ul></li>
+
+<li><code>apropos -r "direc*"</code>
+<ul class="org-ul">
+<li>Imprime todo lo que tenga direc y algo más (es por eso que hay tantos resultados).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7667d1a" class="outline-3">
+<h3 id="org7667d1a"><code>whatis(1)</code></h3>
+<div class="outline-text-3" id="text-org7667d1a">
+<p>
+Encuentra en una sóla línea lo que estas tratando de buscar. Se lleva muy bien
+con <code>apropos(1)</code>.
+</p>
+
+<p>
+Por ejemplo: Ya que sabes que existe una funcionalidad en una
+herramienta con <code>apropos(1)</code> puedes encontrar una breve descripción de lo que
+hace con <code>whatis(1)</code>.
+</p>
+</div>
+
+<div id="outline-container-orgbc49eda" class="outline-4">
+<h4 id="orgbc49eda">Banderas importantes</h4>
+<div class="outline-text-4" id="text-orgbc49eda">
+<ul class="org-ul">
+<li><code>-r --regex</code> expresiónes regulares</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org749dfb4" class="outline-4">
+<h4 id="org749dfb4">Ejemplos:</h4>
+<div class="outline-text-4" id="text-org749dfb4">
+<ul class="org-ul">
+<li><code>whatis emacs</code>
+<ul class="org-ul">
+<li>Sólo retorna el resultado de la herramienta <code>emacs</code> y una breve descripción.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgac85a74" class="outline-3">
+<h3 id="orgac85a74"><code>man(1)</code></h3>
+<div class="outline-text-3" id="text-orgac85a74">
+<p>
+Es la herramienta que normalmente se usa para encontrar la información de los
+<code>manuales</code> en los distintos sistemas operativos de tipo *nix.
+</p>
+
+<p>
+Por ejemplo: <code>man emacs</code> da la información de la primera página del manual de
+emacs que encuentre.
+</p>
+
+<p>
+Las partes que normalmente puedes encontrar en un manual son: NAME, SYNOPSIS,
+CONFIGURATION, DESCRIPTION, OPTIONS,  EXIT STATUS,  RETURN VALUE,  ERRORS,
+ENVIRONMENT, FILES,  VERSIONS,  CONFORMING TO,  NOTES,  BUGS,  EXAMPLE, AUTHORS,
+and SEE ALSO.<sup><a id="fnr.1.100" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+<p>
+Hay veces que el manual tiene varias páginas para un mismo comando, justo como
+es el caso para lo que es <code>man(1)</code> y <code>man(7)</code>. Para acceder a estas páginas lo
+que uno puede hacer es poner el número de la página <code>man 7 man</code> o también <code>man man(7)</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge18e7d5" class="outline-3">
+<h3 id="orge18e7d5">Otros recursos</h3>
+<div class="outline-text-3" id="text-orge18e7d5">
+<ul class="org-ul">
+<li><a href="https://wiki.archlinux.org/">Archwiki</a></li>
+<li><a href="https://man.openbsd.org/">Manual de OpenBSD</a></li>
+<li><a href="https://nostarch.com/obenbsd2e">Absolute OpenBSD, 2nd Edition</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3fdb45f" class="outline-2">
+<h2 id="org3fdb45f"><a href="./indice_canal.html">Indice de las notas del canal</a></h2>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+De la página de <code>man(1)</code> 
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.2 (<a href="https://orgmode.org">Org</a> mode 9.4.4)</p>
+</div>
+</body>
+</html>

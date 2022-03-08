@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Excel con Emacs</title>
+<meta name="generator" content="Org mode" />
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">Excel con Emacs</h1>
+<div id="outline-container-orgb0d6a37" class="outline-2">
+<h2 id="orgb0d6a37">Introducción a las tablas</h2>
+</div>
+<div id="outline-container-org6ae251d" class="outline-2">
+<h2 id="org6ae251d">Un ejemplo</h2>
+<div class="outline-text-2" id="text-org6ae251d">
+<p>
+Puedes usar <code>C-c ?</code> cuando estás en una tabla para ver lo que puedes hacer.
+</p>
+<ul class="org-ul">
+<li>También puedes ver referencias visuales con <code>C-c }</code></li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Math</th>
+<th scope="col" class="org-right">Phsysics</th>
+<th scope="col" class="org-right">vmean([])</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">1.5</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-right">3</td>
+<td class="org-right">9</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">4</td>
+<td class="org-right">4.5</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">Means</td>
+<td class="org-right">3</td>
+<td class="org-right">Means / 2 + 1.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org1fc8c7e" class="outline-2">
+<h2 id="org1fc8c7e">Puedes usar emacs lisp</h2>
+</div>
+
+<div id="outline-container-orgcb9522b" class="outline-2">
+<h2 id="orgcb9522b">Puedes graficar con <code>gnuplot</code> y ascii art</h2>
+</div>
+
+<div id="outline-container-org0cb1c5b" class="outline-2">
+<h2 id="org0cb1c5b">Calc y las fórmulas de elisp</h2>
+<div class="outline-text-2" id="text-org0cb1c5b">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Func</th>
+<th scope="col" class="org-right">n</th>
+<th scope="col" class="org-left">x</th>
+<th scope="col" class="org-left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">exp(x)</td>
+<td class="org-right">1</td>
+<td class="org-left">x</td>
+<td class="org-left">1 + x</td>
+</tr>
+
+<tr>
+<td class="org-left">exp(x)</td>
+<td class="org-right">2</td>
+<td class="org-left">x</td>
+<td class="org-left">1 + x + x<sup>2</sup> / 2</td>
+</tr>
+
+<tr>
+<td class="org-left">exp(x)</td>
+<td class="org-right">3</td>
+<td class="org-left">x</td>
+<td class="org-left">1 + x + x<sup>2</sup> / 2 + x<sup>3</sup> / 6</td>
+</tr>
+
+<tr>
+<td class="org-left">x<sup>2</sup>+sqrt(x)</td>
+<td class="org-right">2</td>
+<td class="org-left">x=0</td>
+<td class="org-left">x*(0.5 / 0) + x<sup>2</sup> (2 - 0.25 / 0) / 2</td>
+</tr>
+
+<tr>
+<td class="org-left">x<sup>2</sup>+sqrt(x)</td>
+<td class="org-right">2</td>
+<td class="org-left">x=1</td>
+<td class="org-left">2 + 2.5 x - 2.5 + 0.875 (x - 1)<sup>2</sup></td>
+</tr>
+
+<tr>
+<td class="org-left">tan(x)</td>
+<td class="org-right">3</td>
+<td class="org-left">x</td>
+<td class="org-left">x pi / 180 + 5.72e-8 x<sup>3</sup> pi<sup>3</sup></td>
+</tr>
+</tbody>
+</table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">func</td>
+<td class="org-right">n</td>
+<td class="org-left">x</td>
+<td class="org-left">Result</td>
+</tr>
+
+<tr>
+<td class="org-left">x<sup>2</sup>+1</td>
+<td class="org-right">2</td>
+<td class="org-left">x</td>
+<td class="org-left">:=taylor($1,$2,$3)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga983a6b" class="outline-2">
+<h2 id="orga983a6b">Plot</h2>
+<div class="outline-text-2" id="text-orga983a6b">
+<p>
+Tienes que instalar <code>gnuplot</code>.  
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Sede</th>
+<th scope="col" class="org-right">Max cites</th>
+<th scope="col" class="org-right">H-index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Chile</td>
+<td class="org-right">257.72</td>
+<td class="org-right">21.39</td>
+</tr>
+
+<tr>
+<td class="org-left">Leeds</td>
+<td class="org-right">165.77</td>
+<td class="org-right">19.68</td>
+</tr>
+
+<tr>
+<td class="org-left">Sao Paolo</td>
+<td class="org-right">71.00</td>
+<td class="org-right">11.50</td>
+</tr>
+
+<tr>
+<td class="org-left">Stockholm</td>
+<td class="org-right">134.19</td>
+<td class="org-right">14.33</td>
+</tr>
+
+<tr>
+<td class="org-left">Morelia</td>
+<td class="org-right">257.56</td>
+<td class="org-right">17.67</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgab4ca6f" class="outline-2">
+<h2 id="orgab4ca6f">ASCII Plot</h2>
+<div class="outline-text-2" id="text-orgab4ca6f">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Sede</th>
+<th scope="col" class="org-right">Max cites</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Chile</td>
+<td class="org-right">257.72</td>
+</tr>
+
+<tr>
+<td class="org-left">Leeds</td>
+<td class="org-right">165.77</td>
+</tr>
+
+<tr>
+<td class="org-left">Sao Paolo</td>
+<td class="org-right">71.00</td>
+</tr>
+
+<tr>
+<td class="org-left">Stockholm</td>
+<td class="org-right">134.19</td>
+</tr>
+
+<tr>
+<td class="org-left">Morelia</td>
+<td class="org-right">257.56</td>
+</tr>
+
+<tr>
+<td class="org-left">Rochefourchat</td>
+<td class="org-right">0.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgb5b011c" class="outline-2">
+<h2 id="orgb5b011c">Referencias</h2>
+<div class="outline-text-2" id="text-orgb5b011c">
+<ul class="org-ul">
+<li><a href="https://orgmode.org/worg/org-tutorials/org-spreadsheet-intro.html">https://orgmode.org/worg/org-tutorials/org-spreadsheet-intro.html</a></li>
+<li><a href="https://orgmode.org/worg/org-tutorials/org-spreadsheet-lisp-formulas.html">https://orgmode.org/worg/org-tutorials/org-spreadsheet-lisp-formulas.html</a></li>
+<li><a href="https://orgmode.org/worg/org-tutorials/org-plot.html">https://orgmode.org/worg/org-tutorials/org-plot.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.2 (<a href="https://orgmode.org">Org</a> mode 9.4.4)</p>
+</div>
+</body>
+</html>
