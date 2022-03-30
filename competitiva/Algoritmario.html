@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Algoritmario</title>
+<meta name="generator" content="Org mode" />
+<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Algoritmario</h1>
+
+<div id="outline-container-orgdcaba38" class="outline-2">
+<h2 id="orgdcaba38">Introducción</h2>
+<div class="outline-text-2" id="text-orgdcaba38">
+<p>
+Este es el algoritmario que e estado haciendo conforme a pasado el tiempo.
+Si utilizas <code>Emacs</code> puedes exportar a <code>pdf</code> o <code>epub</code> si son más cómodos que una página
+web.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc296121" class="outline-2">
+<h2 id="orgc296121">Estructuras de Datos de mortales y medio mortales</h2>
+<div class="outline-text-2" id="text-orgc296121">
+</div>
+<div id="outline-container-org9acbb03" class="outline-3">
+<h3 id="org9acbb03">Clásicas</h3>
+<div class="outline-text-3" id="text-org9acbb03">
+</div>
+<div id="outline-container-org1f6cf30" class="outline-4">
+<h4 id="org1f6cf30">Stack</h4>
+</div>
+
+<div id="outline-container-org2d24160" class="outline-4">
+<h4 id="org2d24160">Queue</h4>
+</div>
+
+<div id="outline-container-org1b5bc51" class="outline-4">
+<h4 id="org1b5bc51">Linked List</h4>
+</div>
+</div>
+
+<div id="outline-container-org9d5294b" class="outline-3">
+<h3 id="org9d5294b">Logarítmicas</h3>
+<div class="outline-text-3" id="text-org9d5294b">
+</div>
+<div id="outline-container-orgb3ba312" class="outline-4">
+<h4 id="orgb3ba312">Priority Queue</h4>
+</div>
+
+<div id="outline-container-orgdabd96b" class="outline-4">
+<h4 id="orgdabd96b">Multiset</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdaf5665" class="outline-2">
+<h2 id="orgdaf5665">Gráficas</h2>
+<div class="outline-text-2" id="text-orgdaf5665">
+</div>
+<div id="outline-container-org1f541be" class="outline-3">
+<h3 id="org1f541be">Representaciónes de Gráficas</h3>
+<div class="outline-text-3" id="text-org1f541be">
+</div>
+<div id="outline-container-org6618c39" class="outline-4">
+<h4 id="org6618c39">Matrices de adyacencia</h4>
+</div>
+
+<div id="outline-container-orge373e5e" class="outline-4">
+<h4 id="orge373e5e">Matrices de</h4>
+</div>
+</div>
+
+<div id="outline-container-org107432b" class="outline-3">
+<h3 id="org107432b">BFS y DFS</h3>
+<div class="outline-text-3" id="text-org107432b">
+</div>
+<div id="outline-container-org8f30b96" class="outline-4">
+<h4 id="org8f30b96">DFS</h4>
+<div class="outline-text-4" id="text-org8f30b96">
+<div class="org-src-container">
+<pre class="src src-C++">
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbcf8d95" class="outline-4">
+<h4 id="orgbcf8d95">BFS</h4>
+<div class="outline-text-4" id="text-orgbcf8d95">
+<div class="org-src-container">
+<pre class="src src-C++">
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga39bde0" class="outline-3">
+<h3 id="orga39bde0">Disjointed Set Union (DSU)</h3>
+<div class="outline-text-3" id="text-orga39bde0">
+</div>
+<div id="outline-container-orgc66be55" class="outline-4">
+<h4 id="orgc66be55">Union by Rank</h4>
+<div class="outline-text-4" id="text-orgc66be55">
+<p>
+Funcion en tiempo \(O(log(N))\) por operación.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold;">struct</span> <span style="font-weight: bold; text-decoration: underline;">DSU</span> {
+        <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt; <span style="font-weight: bold; font-style: italic;">P</span>, <span style="font-weight: bold; font-style: italic;">H</span>;
+        <span style="font-weight: bold;">DSU</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">n</span>) : P(n), H(n, 0) {
+                <span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; n; i++)
+                        P[i] = i;
+        }
+        <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold;">find</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">x</span>) {
+                <span style="font-weight: bold;">if</span>(P[x] == x) {
+                        <span style="font-weight: bold;">return</span> x;
+                }
+                <span style="font-weight: bold;">return</span> find(<span style="font-weight: bold; text-decoration: underline;">P</span>[x]);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">merge</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">x</span>, <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">y</span>) {
+                <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">RootX</span> = find(x);
+                <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">RootY</span> = finx(y);
+                <span style="font-weight: bold;">if</span> (H[RootX] &gt; H[RootY]) {
+                        swap(rootX, rootY);
+                }
+                P[RootX] = RootY;
+                <span style="font-weight: bold;">if</span> (H[RootX] == H[RootY]) {
+                        H[RootY]++;
+                }
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5d9fe75" class="outline-4">
+<h4 id="org5d9fe75">Path Compression</h4>
+<div class="outline-text-4" id="text-org5d9fe75">
+<p>
+Es bastante rápida y en la práctica si quieres implementar algo desde
+cero puedes llegar a usarla. Corre en tiempo \(O(log(N))\) amortizado.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold;">struct</span> <span style="font-weight: bold; text-decoration: underline;">DSU</span> {
+        <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt; <span style="font-weight: bold; font-style: italic;">P</span>;
+        <span style="font-weight: bold;">DSU</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">n</span>) : P(n) {
+                <span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; n; i++) {
+                        P[i] = i;
+                }
+        }
+        <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold;">find</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">x</span>) {
+                <span style="font-weight: bold;">if</span> (P[x] == x) {
+                        <span style="font-weight: bold;">return</span> x;
+                }
+                <span style="font-weight: bold;">return</span> P[x] = find(<span style="font-weight: bold; text-decoration: underline;">P</span>[x]);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">merge</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">x</span>, <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">y</span>) {
+                P[find(x)] = find(y);
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org06cfb96" class="outline-4">
+<h4 id="org06cfb96">Union by Rank y Path Compression</h4>
+<div class="outline-text-4" id="text-org06cfb96">
+<p>
+Funciona en \(O(\alpha(N))\) amortizado y siendo realista es la única que vas a necesitar.
+</p>
+
+<p>
+\(\alpha\): es la función inversa de Ackerman, es casi \(O(1)\).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold;">struct</span> <span style="font-weight: bold; text-decoration: underline;">DSU</span> {
+        <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt; <span style="font-weight: bold; font-style: italic;">P</span>, <span style="font-weight: bold; font-style: italic;">H</span>;
+        <span style="font-weight: bold;">DSU</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">n</span>) : P(n), H(n, 0) {
+                <span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; n; ++i) {
+                        P[i] = i;
+                }
+        }
+        <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold;">find</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">x</span>) {
+                <span style="font-weight: bold;">if</span> (P[x] == x) {
+                        <span style="font-weight: bold;">return</span> x;
+                }
+                <span style="font-weight: bold;">return</span> P[x] = find(<span style="font-weight: bold; text-decoration: underline;">P</span>[x]);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">merge</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">x</span>, <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">y</span>) {
+                <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">rx</span> = find(x);
+                <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">ry</span> = find(y);
+                <span style="font-weight: bold;">if</span>(H[rx] &gt; H[ry])
+                        swap(rx, ry);
+                P[rx] = ry;
+                <span style="font-weight: bold;">if</span> (H[rx] == H[ry]) {
+                        H[ry]++;
+                }
+        }
+        <span style="font-weight: bold; text-decoration: underline;">bool</span> <span style="font-weight: bold;">same</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">a</span>, <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">b</span>) {
+                <span style="font-weight: bold;">return</span> find(a) == find(b);
+        }
+        <span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">print</span>() {
+                <span style="font-weight: bold;">for</span>(<span style="font-weight: bold;">auto</span> <span style="font-weight: bold; font-style: italic;">x</span> : P) {
+                        cout &lt;&lt; x &lt;&lt; <span style="font-style: italic;">" "</span>;
+                }
+                <span style="font-weight: bold; text-decoration: underline;">std</span>::cout &lt;&lt; <span style="font-style: italic;">"\n"</span>;
+        }
+};
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc077b8d" class="outline-3">
+<h3 id="orgc077b8d">MST</h3>
+<div class="outline-text-3" id="text-orgc077b8d">
+</div>
+<div id="outline-container-org5240dda" class="outline-4">
+<h4 id="org5240dda">Kruskal</h4>
+<div class="outline-text-4" id="text-org5240dda">
+<p>
+Vamos a utilizar un DSU con una ligera modificación,
+ahora vamos a ponerle same.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold;">struct</span> <span style="font-weight: bold; text-decoration: underline;">DSU</span> {
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">DSU de la parte anterior</span>
+        <span style="font-weight: bold; text-decoration: underline;">bool</span> <span style="font-weight: bold;">same</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">x</span>, <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">y</span>) {
+                <span style="font-weight: bold;">return</span> find(x) == find(y);
+        }
+};
+</pre>
+</div>
+
+<p>
+El código de Kruskal en:
+</p>
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">priority_queue</span>&lt;<span style="font-weight: bold; text-decoration: underline;">tuple</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>,<span style="font-weight: bold; text-decoration: underline;">int</span>,<span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt; <span style="font-weight: bold; font-style: italic;">pq</span>; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">w, a, b</span>
+<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">a</span>, <span style="font-weight: bold; font-style: italic;">b</span>, <span style="font-weight: bold; font-style: italic;">c</span>;
+<span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; m; ++i) {
+        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+        pq.push({-1*c,a,b});
+ }
+<span style="font-weight: bold; text-decoration: underline;">DSU</span> <span style="font-weight: bold;">dsu</span>(n+1);
+<span style="font-weight: bold; text-decoration: underline;">long</span> <span style="font-weight: bold; text-decoration: underline;">long</span> <span style="font-weight: bold; font-style: italic;">ans</span> = 0;
+<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">size</span> = 0;
+<span style="font-weight: bold;">while</span> (!pq.empty()) {
+        <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">a</span>, <span style="font-weight: bold; font-style: italic;">b</span>;
+        tie(w,a,b) = pq.top();
+        pq.pop();
+        <span style="font-weight: bold;">if</span> (!dsu.same(a, b)) {
+                size = max(dsu.merge(a, b), size);
+                cout &lt;&lt; w*-1 &lt;&lt; <span style="font-style: italic;">"\n"</span>;
+                ans += (w*-1);
+        }
+ }
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8667481" class="outline-4">
+<h4 id="org8667481">Prim</h4>
+<div class="outline-text-4" id="text-org8667481">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">ll</span> <span style="font-weight: bold;">prim</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">start</span>, <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">bool</span>&gt; &amp;<span style="font-weight: bold; font-style: italic;">visited</span>, <span style="font-weight: bold;">const</span> <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">pair</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>, <span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt;&gt; &amp;<span style="font-weight: bold; font-style: italic;">adj</span>) {
+        <span style="font-weight: bold; text-decoration: underline;">priority_queue</span>&lt;<span style="font-weight: bold; text-decoration: underline;">tuple</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>, <span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt; <span style="font-weight: bold; font-style: italic;">pq</span>;
+        <span style="font-weight: bold; text-decoration: underline;">ll</span> <span style="font-weight: bold; font-style: italic;">ans</span> = 0, <span style="font-weight: bold; font-style: italic;">counter</span> = 1;
+        visited[start] = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold;">for</span>(<span style="font-weight: bold;">auto</span> <span style="font-weight: bold; font-style: italic;">a</span> : adj[start]) {
+                pq.push({-1*a.second, a.first});
+        }
+
+        <span style="font-weight: bold;">while</span> (!pq.empty()) {
+                <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">node</span>;
+                tie(w, node) = pq.top();
+                pq.pop();
+                <span style="font-weight: bold;">if</span> (visited[node]) <span style="font-weight: bold;">continue</span>;
+                ans+=w*-1;
+                counter++;
+                visited[node] = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+                <span style="font-weight: bold;">for</span>(<span style="font-weight: bold;">auto</span> <span style="font-weight: bold; font-style: italic;">a</span> : adj[node]) {
+                        pq.push({a.second*-1,a.first});
+                }
+        }
+        <span style="font-weight: bold;">return</span>  ans;
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcea608e" class="outline-3">
+<h3 id="orgcea608e">Single Source Shortest Path</h3>
+<div class="outline-text-3" id="text-orgcea608e">
+</div>
+<div id="outline-container-org5dda717" class="outline-4">
+<h4 id="org5dda717">Dijikstra</h4>
+<div class="outline-text-4" id="text-org5dda717">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">pair</span>&lt;ll,ll&gt;&gt;&gt; <span style="font-weight: bold;">adj</span>(n+1); <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">b, w</span>
+<span style="font-weight: bold; text-decoration: underline;">priority_queue</span>&lt;<span style="font-weight: bold; text-decoration: underline;">tuple</span>&lt;ll, ll&gt;&gt; <span style="font-weight: bold; font-style: italic;">pq</span>; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">w, a</span>
+<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;ll&gt; <span style="font-weight: bold;">distance</span>(n+1, INF);
+
+<span style="font-weight: bold; text-decoration: underline;">ll</span> <span style="font-weight: bold; font-style: italic;">a</span>, <span style="font-weight: bold; font-style: italic;">b</span>, <span style="font-weight: bold; font-style: italic;">c</span>;
+<span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; m; ++i) {
+        cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+        adj[a].push_back({b,c});
+ }
+
+pq.push({0,1});
+distance[1] = 0;
+
+<span style="font-weight: bold;">while</span> (!pq.empty()) {
+        <span style="font-weight: bold; text-decoration: underline;">ll</span> <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">a</span>;
+        tie(w, a) = pq.top();
+        pq.pop();
+        <span style="font-weight: bold;">if</span>(processed[a]) <span style="font-weight: bold;">continue</span>;
+        processed[a] = <span style="font-weight: bold; text-decoration: underline;">true</span>; 
+        <span style="font-weight: bold;">for</span>(<span style="font-weight: bold;">auto</span> <span style="font-weight: bold; font-style: italic;">u</span> : adj[a]) {
+                <span style="font-weight: bold; text-decoration: underline;">ll</span> <span style="font-weight: bold; font-style: italic;">b</span> = u.first, <span style="font-weight: bold; font-style: italic;">w</span> = u.second;
+                <span style="font-weight: bold;">if</span> (distance[a]+w &lt; distance[b]) {
+                        distance[b] = distance[a]+w;
+                        pq.push({-1*distance[b], b});
+                }
+        }
+ }
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8128578" class="outline-4">
+<h4 id="org8128578">Bellman Ford</h4>
+<div class="outline-text-4" id="text-org8128578">
+<div class="org-src-container">
+<pre class="src src-C++">
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgde85f4c" class="outline-4">
+<h4 id="orgde85f4c">Floyd Warshall \(O(n^3)\)</h4>
+<div class="outline-text-4" id="text-orgde85f4c">
+<p>
+Sirve para cuando te preguntan varias veces la misma pregunta
+de encontrar el camino más corto.
+</p>
+
+<p>
+Usas una matriz de adyacencias.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Inicializar matriz de adyacencias</span>
+<span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; n; i++) {
+        <span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">j</span> = 0; j &lt; n; j++) {
+                <span style="font-weight: bold;">if</span>(i == j) mat[i][j] = 0;
+                <span style="font-weight: bold;">else</span> mat[i][j] = INF;
+        }
+ }
+
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">procesar la matriz de adyacencias y cambiar los valores</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">de los caminos conocidos</span>
+
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Floyd Warshall</span>
+<span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; n; i++) {
+        <span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">j</span> = 0; j &lt; n; j++) {
+                <span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">k</span> = 0; k &lt; n; k++) {
+                        mat[j][k]=min(mat[j][k], mat[j][i]+mat[i][k]);
+                }
+        }
+ }
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgda3ece1" class="outline-2">
+<h2 id="orgda3ece1">Árboles</h2>
+<div class="outline-text-2" id="text-orgda3ece1">
+</div>
+<div id="outline-container-org1a3b571" class="outline-4">
+<h4 id="org1a3b571">Árboles Binarios</h4>
+<div class="outline-text-4" id="text-org1a3b571">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold;">struct</span> <span style="font-weight: bold; text-decoration: underline;">node</span> {
+        <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">val</span>;
+        <span style="font-weight: bold; text-decoration: underline;">node</span> *<span style="font-weight: bold; font-style: italic;">right</span>, *<span style="font-weight: bold; font-style: italic;">left</span>;
+        <span style="font-weight: bold;">node</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">v</span>) : val(v), right(<span style="font-weight: bold; text-decoration: underline;">nullptr</span>), left(<span style="font-weight: bold; text-decoration: underline;">nullptr</span>){}
+        <span style="font-weight: bold;">node</span>() : val(0), right(<span style="font-weight: bold; text-decoration: underline;">nullptr</span>), left(<span style="font-weight: bold; text-decoration: underline;">nullptr</span>){}
+};
+</pre>
+</div>
+</div>
+
+<ul class="org-ul">
+<li><a id="orgcb251aa"></a>Recorrer un árbol binario<br />
+<div class="outline-text-5" id="text-orgcb251aa">
+<p>
+Los códigos de inorden, orden y postorden tienen la misma idea de trasfondo.
+La única diferencia es el momento en donde visitas el valor actual en el que
+estás o lo dejas en el stack recursivo.
+</p>
+
+<p>
+El recorrido por niveles es el único que cambia ya que en este caso tenemos
+que hacer una exploración con una queue.
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="org491335a"></a>Inorden<br />
+<div class="outline-text-6" id="text-org491335a">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">inorden</span>(<span style="font-weight: bold; text-decoration: underline;">node</span> *<span style="font-weight: bold; font-style: italic;">root</span>) {
+        <span style="font-weight: bold;">if</span>(root == <span style="font-weight: bold; text-decoration: underline;">nullptr</span>) <span style="font-weight: bold;">return</span>;
+        cout &lt;&lt; root-&gt;val &lt;&lt; <span style="font-style: italic;">" "</span>;
+        inorden(root-&gt;left);
+        inorden(root-&gt;right);
+}
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org1dab8cb"></a>Orden<br />
+<div class="outline-text-6" id="text-org1dab8cb">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">orden</span>(<span style="font-weight: bold; text-decoration: underline;">node</span> *<span style="font-weight: bold; font-style: italic;">root</span>) {
+        <span style="font-weight: bold;">if</span>(root == <span style="font-weight: bold; text-decoration: underline;">nullptr</span>) <span style="font-weight: bold;">return</span>;
+        orden(root-&gt;left);
+        cout &lt;&lt; root-&gt;val &lt;&lt; <span style="font-style: italic;">" "</span>;
+        orden(root-&gt;right);
+}
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="orge39c943"></a>Postorden<br />
+<div class="outline-text-6" id="text-orge39c943">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">postorden</span>(<span style="font-weight: bold; text-decoration: underline;">node</span> *<span style="font-weight: bold; font-style: italic;">root</span>) {
+        <span style="font-weight: bold;">if</span>(root == <span style="font-weight: bold; text-decoration: underline;">nullptr</span>) <span style="font-weight: bold;">return</span>;
+        postorden(root-&gt;left);
+        postorden(root-&gt;right);
+        cout &lt;&lt; root-&gt;val &lt;&lt; <span style="font-style: italic;">" "</span>;
+}
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org60803a3"></a>Orden por Nivel<br />
+<div class="outline-text-6" id="text-org60803a3">
+<p>
+Una BFS.
+</p>
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">queue</span>&lt;<span style="font-weight: bold; text-decoration: underline;">tuple</span>&lt;<span style="font-weight: bold; text-decoration: underline;">TreeNode</span>*, <span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt; <span style="font-weight: bold; font-style: italic;">q</span>;
+<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt; <span style="font-weight: bold; font-style: italic;">ans</span>;
+q.push({root, 0});
+<span style="font-weight: bold;">while</span>(!q.empty()) {
+        <span style="font-weight: bold; text-decoration: underline;">TreeNode</span>* <span style="font-weight: bold; font-style: italic;">node</span>;
+        <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">CurrentDepth</span>;
+        tie(node, CurrentDepth) = q.front();
+        q.pop();
+        <span style="font-weight: bold;">if</span>(node == <span style="font-weight: bold; text-decoration: underline;">nullptr</span>) <span style="font-weight: bold;">continue</span>;
+        <span style="font-weight: bold;">if</span>(ans.size() &lt;= CurrentDepth)
+                ans.resize(CurrentDepth+1);
+        ans[CurrentDepth].push_back(node-&gt;val);
+        q.push({node-&gt;left, CurrentDepth+1});
+        q.push({node-&gt;right, CurrentDepth+1});
+ }
+</pre>
+</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgab45706" class="outline-4">
+<h4 id="orgab45706">Árboles Binarios de Búsqueda</h4>
+<div class="outline-text-4" id="text-orgab45706">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">Node</span> {
+<span style="font-weight: bold;">public</span>:
+        <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">val</span>;
+        <span style="font-weight: bold; text-decoration: underline;">Node</span> *<span style="font-weight: bold; font-style: italic;">right</span>, *<span style="font-weight: bold; font-style: italic;">left</span>;
+
+        <span style="font-weight: bold;">Node</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">v</span>) : val(v), right(<span style="font-weight: bold; text-decoration: underline;">nullptr</span>), left(<span style="font-weight: bold; text-decoration: underline;">nullptr</span>){}
+        <span style="font-weight: bold;">Node</span>() : val(0), right(<span style="font-weight: bold; text-decoration: underline;">nullptr</span>), left(<span style="font-weight: bold; text-decoration: underline;">nullptr</span>){}
+};
+
+<span style="font-weight: bold; text-decoration: underline;">Node</span>* <span style="font-weight: bold;">add</span>(<span style="font-weight: bold; text-decoration: underline;">Node</span> *<span style="font-weight: bold; font-style: italic;">root</span>, <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">val</span>) {
+        <span style="font-weight: bold;">if</span>(root == <span style="font-weight: bold; text-decoration: underline;">nullptr</span>) {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Node</span>(val);
+        }
+        <span style="font-weight: bold;">if</span>(root-&gt;val&lt;val) {
+                root-&gt;right = add(root-&gt;right, val);
+        } <span style="font-weight: bold;">else</span> {
+                root-&gt;left = add(root-&gt;left, val);
+        }
+        <span style="font-weight: bold;">return</span> root;
+}
+<span style="font-weight: bold; text-decoration: underline;">bool</span> <span style="font-weight: bold;">find</span>(<span style="font-weight: bold; text-decoration: underline;">Node</span> *<span style="font-weight: bold; font-style: italic;">root</span>, <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">val</span>) {
+  <span style="font-weight: bold;">if</span> (root == <span style="font-weight: bold; text-decoration: underline;">nullptr</span>) {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">false</span>;
+  }
+  <span style="font-weight: bold;">if</span> (root-&gt;val == val) {
+                <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">true</span>;
+  }
+        <span style="font-weight: bold;">if</span>(val &gt; root-&gt;val) {
+                <span style="font-weight: bold;">return</span> find(root-&gt;right, val);
+        }
+
+        <span style="font-weight: bold;">return</span> find(root-&gt;left,val);
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga423a84" class="outline-4">
+<h4 id="orga423a84">Árbol N-ario</h4>
+<div class="outline-text-4" id="text-orga423a84">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold;">struct</span> <span style="font-weight: bold; text-decoration: underline;">node</span> {
+        <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">val</span>;
+        <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">node</span>*&gt; <span style="font-weight: bold; font-style: italic;">children</span>;
+};
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaa75206" class="outline-2">
+<h2 id="orgaa75206">Matemáticas</h2>
+<div class="outline-text-2" id="text-orgaa75206">
+</div>
+<div id="outline-container-orgb3de74f" class="outline-3">
+<h3 id="orgb3de74f">Criba de Erastostenes</h3>
+</div>
+
+<div id="outline-container-orgc2cb8a4" class="outline-3">
+<h3 id="orgc2cb8a4">Exponenciación Binaria</h3>
+</div>
+
+<div id="outline-container-orgf659513" class="outline-3">
+<h3 id="orgf659513">Propiedades de los módulos</h3>
+</div>
+
+<div id="outline-container-org453ce8a" class="outline-3">
+<h3 id="org453ce8a">Supuesto Big Int en C++ sin que sea Big Int (o como usar strings)</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.2 (<a href="https://orgmode.org">Org</a> mode 9.4.4)</p>
+</div>
+</body>
+</html>
