@@ -17,37 +17,37 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org61b8049">Introducción</a></li>
-<li><a href="#org1f7b3cf">SANITY CHECK</a>
+<li><a href="#orgb5a62ca">Introducción</a></li>
+<li><a href="#orgbf2cc91">SANITY CHECK</a>
 <ul>
-<li><a href="#org5d2a4a1">1. Discord</a></li>
+<li><a href="#org00d99e2">1. Discord</a></li>
 </ul>
 </li>
-<li><a href="#orgb60d643">Forensics</a>
+<li><a href="#org38a7e63">Forensics</a>
 <ul>
-<li><a href="#org04be4af">1. Star Pcap</a></li>
-<li><a href="#orgc9fa20d">2. Future Stego</a></li>
+<li><a href="#org1aa1ea8">1. Star Pcap</a></li>
+<li><a href="#orgdb37c91">2. Future Stego</a></li>
 </ul>
 </li>
-<li><a href="#org0dd99f1">WEB</a>
+<li><a href="#org22c762c">WEB</a>
 <ul>
-<li><a href="#org9d41ed6">1. R2D2</a></li>
-<li><a href="#orgbd8fc57">2. SpaceBuddies</a></li>
-<li><a href="#orgf2672f7">3. Space Traveler</a></li>
+<li><a href="#org4210023">1. R2D2</a></li>
+<li><a href="#orgad5dd06">2. SpaceBuddies</a></li>
+<li><a href="#org088f6fa">3. Space Traveler</a></li>
 </ul>
 </li>
-<li><a href="#org64182d1">OSINT</a>
+<li><a href="#orgf08ae79">OSINT</a>
 <ul>
-<li><a href="#orgef8b5ff">1. Curious</a></li>
+<li><a href="#org001acbd">1. Curious</a></li>
 </ul>
 </li>
-<li><a href="#orge3e0735">ÍNDICE</a></li>
+<li><a href="#org5c1aa19">ÍNDICE</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org61b8049" class="outline-2">
-<h2 id="org61b8049">Introducción</h2>
-<div class="outline-text-2" id="text-org61b8049">
+<div id="outline-container-orgb5a62ca" class="outline-2">
+<h2 id="orgb5a62ca">Introducción</h2>
+<div class="outline-text-2" id="text-orgb5a62ca">
 <p>
 Tomé parte en el <a href="https://spaceheroes.ctfd.io/scoreboard">space heroes CTF</a> del fin de semana de la primera semana de abril
 del 2022 y la verdad es que me divertí. A continuación son las soluciones a los
@@ -56,19 +56,19 @@ problemas que logré hacer.
 </div>
 </div>
 
-<div id="outline-container-org1f7b3cf" class="outline-2">
-<h2 id="org1f7b3cf">SANITY CHECK</h2>
-<div class="outline-text-2" id="text-org1f7b3cf">
+<div id="outline-container-orgbf2cc91" class="outline-2">
+<h2 id="orgbf2cc91">SANITY CHECK</h2>
+<div class="outline-text-2" id="text-orgbf2cc91">
 </div>
-<div id="outline-container-org5d2a4a1" class="outline-3">
-<h3 id="org5d2a4a1">1. Discord</h3>
-<div class="outline-text-3" id="text-org5d2a4a1">
+<div id="outline-container-org00d99e2" class="outline-3">
+<h3 id="org00d99e2">1. Discord</h3>
+<div class="outline-text-3" id="text-org00d99e2">
 <p>
 Estaba en los roles de los bots.
 </p>
 
 
-<div id="org358a64d" class="figure">
+<div id="org95f4b1b" class="figure">
 <p><img src="./discordFlag.png" alt="discordFlag.png" />
 </p>
 </div>
@@ -76,13 +76,13 @@ Estaba en los roles de los bots.
 </div>
 </div>
 
-<div id="outline-container-orgb60d643" class="outline-2">
-<h2 id="orgb60d643">Forensics</h2>
-<div class="outline-text-2" id="text-orgb60d643">
+<div id="outline-container-org38a7e63" class="outline-2">
+<h2 id="org38a7e63">Forensics</h2>
+<div class="outline-text-2" id="text-org38a7e63">
 </div>
-<div id="outline-container-org04be4af" class="outline-3">
-<h3 id="org04be4af">1. Star Pcap</h3>
-<div class="outline-text-3" id="text-org04be4af">
+<div id="outline-container-org1aa1ea8" class="outline-3">
+<h3 id="org1aa1ea8">1. Star Pcap</h3>
+<div class="outline-text-3" id="text-org1aa1ea8">
 <p>
 Nos dan un archivo llamado <code>star.pcap</code>. Mi primer instinto es abrirlo
 en <code>wireshark</code>, aquí vi que solo un caracter cambiaba entre cada uno de los paquetes
@@ -99,7 +99,7 @@ de letras aleatorias estaban codificadas en <b>base64</b>.
 </p>
 
 
-<div id="org304cacf" class="figure">
+<div id="org7b9815b" class="figure">
 <p><img src="./StarPcap.png" alt="StarPcap.png" />
 </p>
 </div>
@@ -109,9 +109,9 @@ de letras aleatorias estaban codificadas en <b>base64</b>.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc9fa20d" class="outline-3">
-<h3 id="orgc9fa20d">2. Future Stego</h3>
-<div class="outline-text-3" id="text-orgc9fa20d">
+<div id="outline-container-orgdb37c91" class="outline-3">
+<h3 id="orgdb37c91">2. Future Stego</h3>
+<div class="outline-text-3" id="text-orgdb37c91">
 <p>
 Como tenía el nombre de stego pensé en esteganografía ( estudio y aplicación de técnicas que permiten ocultar mensajes u objetos,
 dentro de otros). Te daban dos imagenes, una de referencia y otra en donde estaba la bandera.
@@ -119,7 +119,7 @@ dentro de otros). Te daban dos imagenes, una de referencia y otra en donde estab
 
 
 
-<div id="orgaeb8c0f" class="figure">
+<div id="org8b913b3" class="figure">
 <p><img src="./futureStego/sallyride.jpg" alt="sallyride.jpg" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Imagen de referencia para el problema Future Stego</p>
@@ -127,7 +127,7 @@ dentro de otros). Te daban dos imagenes, una de referencia y otra en donde estab
 
 
 
-<div id="org67f7141" class="figure">
+<div id="org5949635" class="figure">
 <p><img src="./futureStego/shuttlesteg.jpeg" alt="shuttlesteg.jpeg" />
 </p>
 <p><span class="figure-number">Figure 4: </span>El problema de Future Stego como tal</p>
@@ -155,13 +155,13 @@ era la otra fotografía) logré conseguir la contraseña (que era <code>sallyrid
 </div>
 </div>
 
-<div id="outline-container-org0dd99f1" class="outline-2">
-<h2 id="org0dd99f1">WEB</h2>
-<div class="outline-text-2" id="text-org0dd99f1">
+<div id="outline-container-org22c762c" class="outline-2">
+<h2 id="org22c762c">WEB</h2>
+<div class="outline-text-2" id="text-org22c762c">
 </div>
-<div id="outline-container-org9d41ed6" class="outline-3">
-<h3 id="org9d41ed6">1. R2D2</h3>
-<div class="outline-text-3" id="text-org9d41ed6">
+<div id="outline-container-org4210023" class="outline-3">
+<h3 id="org4210023">1. R2D2</h3>
+<div class="outline-text-3" id="text-org4210023">
 <p>
 En el sitio web salía una foto de <a href="https://www.source-data.com/wp-content/uploads/2016/12/R2D2.jpg">R2D2</a> (el personaje de star wars) y pensé que tal vez tenía algo que ver con que son robots.
 Entonces cheque <span class="underline">/robots.txt</span> y efectivamente ahí estaba la bandera.
@@ -173,9 +173,9 @@ Entonces cheque <span class="underline">/robots.txt</span> y efectivamente ahí 
 </div>
 </div>
 
-<div id="outline-container-orgbd8fc57" class="outline-3">
-<h3 id="orgbd8fc57">2. SpaceBuddies</h3>
-<div class="outline-text-3" id="text-orgbd8fc57">
+<div id="outline-container-orgad5dd06" class="outline-3">
+<h3 id="orgad5dd06">2. SpaceBuddies</h3>
+<div class="outline-text-3" id="text-orgad5dd06">
 <p>
 Como te mandaba directamente a una validación de usuario, pensé que tal vez modificando las cookies
 podría encontrar la solución del problema, ya tienes los usuarios específico para eso, son los nombres
@@ -186,7 +186,7 @@ De:
 
 
 
-<div id="org0521b87" class="figure">
+<div id="orgd743d82" class="figure">
 <p><img src="./userIDSpaceBuddies.png" alt="userIDSpaceBuddies.png" />
 </p>
 </div>
@@ -197,22 +197,22 @@ a
 
 
 
-<div id="orgc2dab59" class="figure">
+<div id="org2fb2e6a" class="figure">
 <p><img src="./spaceBuddies.png" alt="spaceBuddies.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf2672f7" class="outline-3">
-<h3 id="orgf2672f7">3. Space Traveler</h3>
-<div class="outline-text-3" id="text-orgf2672f7">
+<div id="outline-container-org088f6fa" class="outline-3">
+<h3 id="org088f6fa">3. Space Traveler</h3>
+<div class="outline-text-3" id="text-org088f6fa">
 <p>
 Vi el código de la página y el javascript estaba obfuscado.
 </p>
 
 
 
-<div id="orgcf37706" class="figure">
+<div id="orgb7e5619" class="figure">
 <p><img src="./javascriptObfuscated.png" alt="javascriptObfuscated.png" />
 </p>
 </div>
@@ -223,7 +223,7 @@ Quitandole el obfuscamiento consegui la bandera.
 
 
 
-<div id="org44ddcf2" class="figure">
+<div id="orgda0af5b" class="figure">
 <p><img src="./javascriptDeObfuscated.png" alt="javascriptDeObfuscated.png" />
 </p>
 </div>
@@ -231,19 +231,19 @@ Quitandole el obfuscamiento consegui la bandera.
 </div>
 </div>
 
-<div id="outline-container-org64182d1" class="outline-2">
-<h2 id="org64182d1">OSINT</h2>
-<div class="outline-text-2" id="text-org64182d1">
+<div id="outline-container-orgf08ae79" class="outline-2">
+<h2 id="orgf08ae79">OSINT</h2>
+<div class="outline-text-2" id="text-orgf08ae79">
 </div>
-<div id="outline-container-orgef8b5ff" class="outline-3">
-<h3 id="orgef8b5ff">1. Curious</h3>
-<div class="outline-text-3" id="text-orgef8b5ff">
+<div id="outline-container-org001acbd" class="outline-3">
+<h3 id="org001acbd">1. Curious</h3>
+<div class="outline-text-3" id="text-org001acbd">
 <p>
 Reverse Image search y Yandex tenía la respuesta.
 </p>
 
 
-<div id="org6173554" class="figure">
+<div id="org647d693" class="figure">
 <p><img src="./2_OSINT.png" alt="2_OSINT.png" />
 </p>
 </div>
@@ -251,8 +251,8 @@ Reverse Image search y Yandex tenía la respuesta.
 </div>
 </div>
 
-<div id="outline-container-orge3e0735" class="outline-2">
-<h2 id="orge3e0735"><a href="../index.html">ÍNDICE</a></h2>
+<div id="outline-container-org5c1aa19" class="outline-2">
+<h2 id="org5c1aa19"><a href="../index.html">ÍNDICE</a></h2>
 </div>
 </div>
 <div id="postamble" class="status">

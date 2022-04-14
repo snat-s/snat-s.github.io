@@ -35,40 +35,27 @@
 <div id="content">
 <h1 class="title">Algoritmario</h1>
 
-<div id="outline-container-org06ad326" class="outline-2">
-<h2 id="org06ad326">Gráficas</h2>
-<div class="outline-text-2" id="text-org06ad326">
+<div id="outline-container-orge352f7d" class="outline-2">
+<h2 id="orge352f7d">Gráficas</h2>
+<div class="outline-text-2" id="text-orge352f7d">
 </div>
-<div id="outline-container-org4f434a6" class="outline-3">
-<h3 id="org4f434a6">Representaciónes de Gráficas</h3>
-<div class="outline-text-3" id="text-org4f434a6">
+<div id="outline-container-org6a8e797" class="outline-3">
+<h3 id="org6a8e797">Representaciónes de Gráficas</h3>
+<div class="outline-text-3" id="text-org6a8e797">
 </div>
-<div id="outline-container-orgc9f6193" class="outline-4">
-<h4 id="orgc9f6193">Matrices de adyacencia</h4>
-</div>
-
-<div id="outline-container-org4f4466f" class="outline-4">
-<h4 id="org4f4466f">Matrices de</h4>
-</div>
-</div>
-
-<div id="outline-container-orgb09fb24" class="outline-3">
-<h3 id="orgb09fb24">BFS y DFS</h3>
-<div class="outline-text-3" id="text-orgb09fb24">
-</div>
-<div id="outline-container-org298fefc" class="outline-4">
-<h4 id="org298fefc">DFS</h4>
-<div class="outline-text-4" id="text-org298fefc">
+<div id="outline-container-org1e93cc4" class="outline-4">
+<h4 id="org1e93cc4">Matrices de adyacencia</h4>
+<div class="outline-text-4" id="text-org1e93cc4">
 <div class="org-src-container">
-<pre class="src src-C++">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt; <span style="font-weight: bold;">adj</span>(N,vector(M, 0));
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org4443fcb" class="outline-4">
-<h4 id="org4443fcb">BFS</h4>
-<div class="outline-text-4" id="text-org4443fcb">
+<div id="outline-container-org229e538" class="outline-4">
+<h4 id="org229e538">Matrices de</h4>
+<div class="outline-text-4" id="text-org229e538">
 <div class="org-src-container">
 <pre class="src src-C++">
 </pre>
@@ -76,13 +63,73 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgcf2af11" class="outline-3">
-<h3 id="orgcf2af11">Disjointed Set Union (DSU)</h3>
-<div class="outline-text-3" id="text-orgcf2af11">
+<div id="outline-container-org0e6f19e" class="outline-3">
+<h3 id="org0e6f19e">BFS y DFS</h3>
+<div class="outline-text-3" id="text-org0e6f19e">
 </div>
-<div id="outline-container-org2f74d64" class="outline-4">
-<h4 id="org2f74d64">Union by Rank</h4>
-<div class="outline-text-4" id="text-org2f74d64">
+<div id="outline-container-org7eea86b" class="outline-4">
+<h4 id="org7eea86b">DFS</h4>
+<div class="outline-text-4" id="text-org7eea86b">
+<div class="org-src-container">
+<pre class="src src-C++">
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7f93d56" class="outline-4">
+<h4 id="org7f93d56">BFS \(O(V+E)\)</h4>
+<div class="outline-text-4" id="text-org7f93d56">
+<p>
+Puede usarse en una gráfica explícita con una lista de adyacencias:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">bfs</span>(<span style="font-weight: bold;">const</span> <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt; &amp;<span style="font-weight: bold; font-style: italic;">adj</span>, <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">start</span>, <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">bool</span>&gt; &amp;<span style="font-weight: bold; font-style: italic;">visited</span>) {
+        <span style="font-weight: bold; text-decoration: underline;">queue</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt; <span style="font-weight: bold; font-style: italic;">q</span>;
+        q.push(start);
+        visited[start] = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold;">while</span>(!q.empty()) {
+                <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">node</span> = q.front();
+                q.pop();
+                <span style="font-weight: bold;">for</span>(<span style="font-weight: bold;">auto</span> <span style="font-weight: bold; font-style: italic;">u</span> : adj[node]) {
+                        <span style="font-weight: bold;">if</span>(!visited[u])
+                                q.push(u);
+                }
+        }
+        <span style="font-weight: bold;">return</span> ans;
+}
+</pre>
+</div>
+</div>
+
+
+<ul class="org-ul">
+<li><a id="org905651f"></a>Gráfica Implícita<br />
+<div class="outline-text-5" id="text-org905651f">
+<p>
+Gráfica implícita (por ejemplo un laberínto)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C++">
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org5bfec80"></a><br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbe0d633" class="outline-3">
+<h3 id="orgbe0d633">Disjointed Set Union (DSU)</h3>
+<div class="outline-text-3" id="text-orgbe0d633">
+</div>
+<div id="outline-container-org264cef5" class="outline-4">
+<h4 id="org264cef5">Union by Rank</h4>
+<div class="outline-text-4" id="text-org264cef5">
 <p>
 Función en tiempo \(O(log(N))\) por operación.
 </p>
@@ -116,12 +163,14 @@ Función en tiempo \(O(log(N))\) por operación.
 </div>
 </div>
 </div>
-<div id="outline-container-org9b0b473" class="outline-4">
-<h4 id="org9b0b473">Path Compression</h4>
-<div class="outline-text-4" id="text-org9b0b473">
+
+<div id="outline-container-orgf4afe19" class="outline-4">
+<h4 id="orgf4afe19">Path Compression</h4>
+<div class="outline-text-4" id="text-orgf4afe19">
 <p>
 Es bastante rápida y en la práctica si quieres implementar algo desde
-cero puedes llegar a usarla. Corre en tiempo \(O(log(N))\) amortizado.
+cero puedes llegar a usarla. Corre en tiempo \(O(log(N))\) amortizado. Pero
+cada operación puede llegar a ser \(O(N)\).
 </p>
 
 <div class="org-src-container">
@@ -146,9 +195,9 @@ cero puedes llegar a usarla. Corre en tiempo \(O(log(N))\) amortizado.
 </div>
 </div>
 </div>
-<div id="outline-container-org2337f94" class="outline-4">
-<h4 id="org2337f94">Union by Rank y Path Compression</h4>
-<div class="outline-text-4" id="text-org2337f94">
+<div id="outline-container-org182c0af" class="outline-4">
+<h4 id="org182c0af">Union by Rank y Path Compression</h4>
+<div class="outline-text-4" id="text-org182c0af">
 <p>
 Funciona en \(O(\alpha(N))\) amortizado y siendo realista es la única que vas a necesitar.
 </p>
@@ -197,13 +246,13 @@ Funciona en \(O(\alpha(N))\) amortizado y siendo realista es la única que vas a
 </div>
 </div>
 
-<div id="outline-container-org4f5df93" class="outline-3">
-<h3 id="org4f5df93">MST</h3>
-<div class="outline-text-3" id="text-org4f5df93">
+<div id="outline-container-orgd672c17" class="outline-3">
+<h3 id="orgd672c17">MST</h3>
+<div class="outline-text-3" id="text-orgd672c17">
 </div>
-<div id="outline-container-org02ea30a" class="outline-4">
-<h4 id="org02ea30a">Kruskal</h4>
-<div class="outline-text-4" id="text-org02ea30a">
+<div id="outline-container-org0b82425" class="outline-4">
+<h4 id="org0b82425">Kruskal</h4>
+<div class="outline-text-4" id="text-org0b82425">
 <p>
 Vamos a utilizar un DSU con una ligera modificación,
 ahora vamos a ponerle same.
@@ -247,9 +296,9 @@ El código de Kruskal en:
 </div>
 </div>
 
-<div id="outline-container-orgba4f4fb" class="outline-4">
-<h4 id="orgba4f4fb">Prim</h4>
-<div class="outline-text-4" id="text-orgba4f4fb">
+<div id="outline-container-org7bd8153" class="outline-4">
+<h4 id="org7bd8153">Prim</h4>
+<div class="outline-text-4" id="text-org7bd8153">
 <div class="org-src-container">
 <pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">ll</span> <span style="font-weight: bold;">prim</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">start</span>, <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">bool</span>&gt; &amp;<span style="font-weight: bold; font-style: italic;">visited</span>, <span style="font-weight: bold;">const</span> <span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">pair</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>, <span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt;&gt; &amp;<span style="font-weight: bold; font-style: italic;">adj</span>) {
         <span style="font-weight: bold; text-decoration: underline;">priority_queue</span>&lt;<span style="font-weight: bold; text-decoration: underline;">tuple</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>, <span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt; <span style="font-weight: bold; font-style: italic;">pq</span>;
@@ -278,13 +327,13 @@ El código de Kruskal en:
 </div>
 </div>
 </div>
-<div id="outline-container-org991d79b" class="outline-3">
-<h3 id="org991d79b">Single Source Shortest Path</h3>
-<div class="outline-text-3" id="text-org991d79b">
+<div id="outline-container-org1827f04" class="outline-3">
+<h3 id="org1827f04">Single Source Shortest Path</h3>
+<div class="outline-text-3" id="text-org1827f04">
 </div>
-<div id="outline-container-orgb636cd1" class="outline-4">
-<h4 id="orgb636cd1">Dijikstra \(Nlog(N)\)</h4>
-<div class="outline-text-4" id="text-orgb636cd1">
+<div id="outline-container-org1704e2c" class="outline-4">
+<h4 id="org1704e2c">Dijikstra \(Nlog(N)\)</h4>
+<div class="outline-text-4" id="text-org1704e2c">
 <div class="org-src-container">
 <pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">pair</span>&lt;ll,ll&gt;&gt;&gt; <span style="font-weight: bold;">adj</span>(n+1); <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">b, w</span>
 <span style="font-weight: bold; text-decoration: underline;">priority_queue</span>&lt;<span style="font-weight: bold; text-decoration: underline;">tuple</span>&lt;ll, ll&gt;&gt; <span style="font-weight: bold; font-style: italic;">pq</span>; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">w, a</span>
@@ -318,9 +367,9 @@ distance[1] = 0;
 </div>
 </div>
 
-<div id="outline-container-orgdac84a2" class="outline-4">
-<h4 id="orgdac84a2">Bellman Ford \(O(V*E)\)</h4>
-<div class="outline-text-4" id="text-orgdac84a2">
+<div id="outline-container-org6f368e7" class="outline-4">
+<h4 id="org6f368e7">Bellman Ford \(O(V*E)\)</h4>
+<div class="outline-text-4" id="text-org6f368e7">
 <p>
 Tienes un vector de distancias que inicia en infinito, y el lugar de
 donde quieres iniciar lo pones en 0 <code>distancia[&lt;lugar de inicio&gt;] = 0</code>.
@@ -340,9 +389,9 @@ donde quieres iniciar lo pones en 0 <code>distancia[&lt;lugar de inicio&gt;] = 0
 </div>
 </div>
 
-<div id="outline-container-org620476b" class="outline-4">
-<h4 id="org620476b">Floyd Warshall \(O(n^3)\)</h4>
-<div class="outline-text-4" id="text-org620476b">
+<div id="outline-container-orgc81f0c5" class="outline-4">
+<h4 id="orgc81f0c5">Floyd Warshall \(O(n^3)\) (APSP)</h4>
+<div class="outline-text-4" id="text-orgc81f0c5">
 <p>
 Sirve para cuando te preguntan varias veces la misma pregunta
 de encontrar el camino más corto.
@@ -378,15 +427,74 @@ Usas una matriz de adyacencias.
 </div>
 </div>
 </div>
+<div id="outline-container-org4da6b28" class="outline-3">
+<h3 id="org4da6b28">Topological Sort</h3>
+<div class="outline-text-3" id="text-org4da6b28">
+<p>
+En este caso la gráfica va de 1 a n.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt; <span style="font-weight: bold;">adj</span>(n+1);
+<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">bool</span>&gt; <span style="font-weight: bold; font-style: italic;">visited</span>(n+1, <span style="font-weight: bold; text-decoration: underline;">false</span>); <span style="font-weight: bold; font-style: italic;">//</span><span style="font-weight: bold; font-style: italic;">cuidado con este, vector bool puede ser traicionero</span>
+
+<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">a</span>, <span style="font-weight: bold; font-style: italic;">b</span>;
+
+<span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 1; i &lt;= m; ++i) {
+        <span style="font-weight: bold; text-decoration: underline;">std</span>::cin &gt;&gt; a &gt;&gt; b;
+        adj[a].push_back(b);
+ }
+
+<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt; <span style="font-weight: bold; font-style: italic;">inDegree</span>(n+1, 0);
+<span style="font-weight: bold; text-decoration: underline;">queue</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt; <span style="font-weight: bold; font-style: italic;">q</span>;
+
+<span style="font-weight: bold;">for</span> (<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 1; i &lt;= n; ++i) {
+        <span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">v</span> : adj[i]) {
+                inDegree[v]++;
+        }
+ }
+
+<span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">i</span> = 1; i &lt;= n; i++) {
+        <span style="font-weight: bold;">if</span> (inDegree[i] == 0) {
+                q.push(i);
+        }
+ }
+
+<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">index</span> = 1;
+<span style="font-weight: bold; text-decoration: underline;">vector</span>&lt;<span style="font-weight: bold; text-decoration: underline;">int</span>&gt; <span style="font-weight: bold; font-style: italic;">order</span>(n+1,0);
+
+<span style="font-weight: bold;">while</span> (!q.empty()) {
+        <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">v</span> = q.front();
+        q.pop();
+        order[index++] = v;
+
+        <span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">u</span> : adj[v]) {
+                inDegree[u]--;
+                <span style="font-weight: bold;">if</span> (inDegree[u] == 0) {
+                        q.push(u);
+                }
+        }
+
+ }
+<span style="font-weight: bold;">if</span> (index!=n) {
+        <span style="font-weight: bold; text-decoration: underline;">std</span>::cout &lt;&lt; <span style="font-style: italic;">"Impossible\n"</span>;
+ }
+<span style="font-weight: bold;">for</span>(<span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">a</span> : order) {
+        <span style="font-weight: bold;">if</span>(a) cout &lt;&lt; a &lt;&lt; <span style="font-style: italic;">" "</span>;
+ }
+</pre>
+</div>
+</div>
+</div>
 </div>
 
-<div id="outline-container-org4f57d29" class="outline-2">
-<h2 id="org4f57d29">Árboles</h2>
-<div class="outline-text-2" id="text-org4f57d29">
+<div id="outline-container-orgfc61963" class="outline-2">
+<h2 id="orgfc61963">Árboles</h2>
+<div class="outline-text-2" id="text-orgfc61963">
 </div>
-<div id="outline-container-org39229c1" class="outline-4">
-<h4 id="org39229c1">Árboles Binarios</h4>
-<div class="outline-text-4" id="text-org39229c1">
+<div id="outline-container-orge7844f2" class="outline-4">
+<h4 id="orge7844f2">Árboles Binarios</h4>
+<div class="outline-text-4" id="text-orge7844f2">
 <div class="org-src-container">
 <pre class="src src-C++"><span style="font-weight: bold;">struct</span> <span style="font-weight: bold; text-decoration: underline;">node</span> {
         <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">val</span>;
@@ -399,8 +507,8 @@ Usas una matriz de adyacencias.
 </div>
 
 <ul class="org-ul">
-<li><a id="org4893419"></a>Recorrer un árbol binario<br />
-<div class="outline-text-5" id="text-org4893419">
+<li><a id="orgf1f4b30"></a>Recorrer un árbol binario<br />
+<div class="outline-text-5" id="text-orgf1f4b30">
 <p>
 Los códigos de inorden, orden y postorden tienen la misma idea de trasfondo.
 La única diferencia es el momento en donde visitas el valor actual en el que
@@ -414,8 +522,8 @@ que hacer una exploración con una queue.
 </div>
 
 <ul class="org-ul">
-<li><a id="orgb406885"></a>Inorden<br />
-<div class="outline-text-6" id="text-orgb406885">
+<li><a id="org5c8f47c"></a>Inorden<br />
+<div class="outline-text-6" id="text-org5c8f47c">
 <div class="org-src-container">
 <pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">inorden</span>(<span style="font-weight: bold; text-decoration: underline;">node</span> *<span style="font-weight: bold; font-style: italic;">root</span>) {
         <span style="font-weight: bold;">if</span>(root == <span style="font-weight: bold; text-decoration: underline;">nullptr</span>) <span style="font-weight: bold;">return</span>;
@@ -428,8 +536,8 @@ que hacer una exploración con una queue.
 </div>
 </li>
 
-<li><a id="org120b197"></a>Orden<br />
-<div class="outline-text-6" id="text-org120b197">
+<li><a id="org4a57d5e"></a>Orden<br />
+<div class="outline-text-6" id="text-org4a57d5e">
 <div class="org-src-container">
 <pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">orden</span>(<span style="font-weight: bold; text-decoration: underline;">node</span> *<span style="font-weight: bold; font-style: italic;">root</span>) {
         <span style="font-weight: bold;">if</span>(root == <span style="font-weight: bold; text-decoration: underline;">nullptr</span>) <span style="font-weight: bold;">return</span>;
@@ -442,8 +550,8 @@ que hacer una exploración con una queue.
 </div>
 </li>
 
-<li><a id="org8e47479"></a>Postorden<br />
-<div class="outline-text-6" id="text-org8e47479">
+<li><a id="orgda8c379"></a>Postorden<br />
+<div class="outline-text-6" id="text-orgda8c379">
 <div class="org-src-container">
 <pre class="src src-C++"><span style="font-weight: bold; text-decoration: underline;">void</span> <span style="font-weight: bold;">postorden</span>(<span style="font-weight: bold; text-decoration: underline;">node</span> *<span style="font-weight: bold; font-style: italic;">root</span>) {
         <span style="font-weight: bold;">if</span>(root == <span style="font-weight: bold; text-decoration: underline;">nullptr</span>) <span style="font-weight: bold;">return</span>;
@@ -456,8 +564,8 @@ que hacer una exploración con una queue.
 </div>
 </li>
 
-<li><a id="orge6e35f5"></a>Orden por Nivel<br />
-<div class="outline-text-6" id="text-orge6e35f5">
+<li><a id="org51fc5ef"></a>Orden por Nivel<br />
+<div class="outline-text-6" id="text-org51fc5ef">
 <p>
 Una BFS.
 </p>
@@ -485,9 +593,9 @@ q.push({root, 0});
 </li>
 </ul>
 </div>
-<div id="outline-container-orgdb0bd4d" class="outline-4">
-<h4 id="orgdb0bd4d">Árboles Binarios de Búsqueda</h4>
-<div class="outline-text-4" id="text-orgdb0bd4d">
+<div id="outline-container-orgeda48fe" class="outline-4">
+<h4 id="orgeda48fe">Árboles Binarios de Búsqueda</h4>
+<div class="outline-text-4" id="text-orgeda48fe">
 <div class="org-src-container">
 <pre class="src src-C++"><span style="font-weight: bold;">class</span> <span style="font-weight: bold; text-decoration: underline;">Node</span> {
 <span style="font-weight: bold;">public</span>:
@@ -526,9 +634,9 @@ q.push({root, 0});
 </div>
 </div>
 </div>
-<div id="outline-container-org416f1bd" class="outline-4">
-<h4 id="org416f1bd">Árbol N-ario</h4>
-<div class="outline-text-4" id="text-org416f1bd">
+<div id="outline-container-org172566b" class="outline-4">
+<h4 id="org172566b">Árbol N-ario</h4>
+<div class="outline-text-4" id="text-org172566b">
 <div class="org-src-container">
 <pre class="src src-C++"><span style="font-weight: bold;">struct</span> <span style="font-weight: bold; text-decoration: underline;">node</span> {
         <span style="font-weight: bold; text-decoration: underline;">int</span> <span style="font-weight: bold; font-style: italic;">val</span>;
